@@ -5,12 +5,6 @@ module.exports = app => {
     app.get('/', (req, res) => {
         res.json({ status: 'NTASK API' })
     });
-
-    app.get('/tasks', (req, res) => {
-        Tasks.findAll({}, tasks => {
-            res.json({ tasks });
-        });
-    });
 };
 
 
